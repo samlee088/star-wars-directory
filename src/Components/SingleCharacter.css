@@ -1,0 +1,47 @@
+.singleCharacter {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    font-family: "Ubuntu";
+    color: #000;
+    animation: rotate 6s infinite alternate linear;
+    background-image: url('https://www.denofgeek.com/wp-content/uploads/2020/05/Star-Destroyer.jpg?fit=1920%2C1080');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    
+}
+
+.singleCharacterCard {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+
+}
+
+
+
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+@media (width >= 500px) {
+    body{
+        padding: 0;
+    }
+    .singleCharacterCard{
+        margin: 0;
+        width: 400px;
+    }
+}

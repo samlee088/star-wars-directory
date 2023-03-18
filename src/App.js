@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './Components/HomePage';
 import AllCharactersDisplay from './Components/AllCharactersDisplay';
+import SingleCharacter from './Components/SingleCharacter';
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
           <Route 
             path = "/AllCharacters"
             element={<AllCharactersDisplay/>}
+          />
+          <Route 
+            path='/SingleCharacter'
+            element={<SingleCharacter/>}
           />
         </Routes>
       </Router>
