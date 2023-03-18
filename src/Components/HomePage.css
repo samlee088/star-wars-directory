@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+.homePage {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    font-family: "Ubuntu";
+    color: #000;
+    animation: rotate 6s infinite alternate linear;
+    background-image: url('https://www.denofgeek.com/wp-content/uploads/2020/05/Star-Destroyer.jpg?fit=1920%2C1080');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    
+}
+
+.loginCard {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+}
+
+.loginCard > h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+
+}
+
+.loginCard > h3 {
+    color: rgba(0,0,0,0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.loginForm {
+    width: 100%;
+    margin: 0;
+    display: grid;
+     gap: 16px;
+}
+
+.loginForm > input, .login-form> button {
+    width: 100%;
+}
+
+.login-form > input {
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
+    cursor: pointer;
+}
+
+.loginForm > input:hover {
+    border: 2px solid #10449A;
+    cursor: pointer;
+}
+
+.loginForm > button {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: #216ce7;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+
+}
+
+.loginForm > button:hover {
+    background: #10449A;
+    transition: all 0.2s;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+@media (width >= 500px) {
+    body{
+        padding: 0;
+    }
+    .loginCard{
+        margin: 0;
+        width: 400px;
+    }
+}
