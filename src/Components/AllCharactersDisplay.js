@@ -1,18 +1,27 @@
 import React, {useState, useEffect} from 'react';
 import axios from '../axios';
 import './AllCharactersDisplay.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function AllCharactersDisplay() {
 
     const [characters, setCharacters] = useState([]);
     const [requestData, setRequestData] = useState([]);
+    const [requestUrl, setRequestUrl] = useState('https://swapi.dev/api/people')
 
+    const location = useLocation();
     const navigate = useNavigate();
-
+    
     useEffect( () => {
         async function allCharactersQuery() {
-            const request = await axios.get('people');
+
+            let request = '';
+            if(location.state && location.state.url) {
+                request = await axios.get(location.state.url);
+            } else {
+                request = await axios.get('people');
+            }
+
             setCharacters(request.data.results);
             setRequestData(request.data);
             console.log(request.data);
@@ -25,13 +34,14 @@ function AllCharactersDisplay() {
 
     async function getAnotherPage(nextPageUrl) {
             const request = await axios.get(nextPageUrl);
+            setRequestUrl(nextPageUrl)
             setCharacters(request.data.results);
             setRequestData(request.data);
             return request;
     }
 
     async function singleCharacterRoute(characterUrl) {
-        navigate('/SingleCharacter', { state: {characterUrl: characterUrl}})
+        navigate('/SingleCharacter', { state: {characterUrl: characterUrl, url: requestUrl }})
     }
 
     return(

@@ -3,6 +3,7 @@ import './SingleCharacter.css';
 import axios from '../axios';
 import {useLocation} from 'react-router-dom';
 import HomeButton from './HomeButton';
+import BackButton from './BackButton';
 
 function SingleCharacter() {
 
@@ -34,7 +35,7 @@ function SingleCharacter() {
         getCharacterHomeWorld();
       }, [character]);
     
-    // console.log('location', location)
+    console.log('location', location)
     console.log(character);
     console.log(homeworld)
 
@@ -48,6 +49,7 @@ function SingleCharacter() {
                 <h3>Hair Color: {character.hair_color}</h3>
                 <h3>Eye Color: {character.eye_color}</h3>
                 <h3>HomeWorld: {homeworld.name} </h3>
+                <BackButton url={location.state.url}/>
                 <HomeButton/>
             </div>
 
