@@ -35,9 +35,9 @@ function SingleCharacter() {
         getCharacterHomeWorld();
       }, [character]);
     
-    console.log('location', location)
-    console.log(character);
-    console.log(homeworld)
+    // console.log('location', location)
+    // console.log(character);
+    // console.log(homeworld)
 
     return(
         <div className='singleCharacter'>

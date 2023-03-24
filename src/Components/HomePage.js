@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './HomePage.css';
 import AllCharactersTrigger from './AllCharactersTrigger';
+import AllMoviesTrigger from './AllMoviesTrigger';
 import {useNavigate} from 'react-router-dom';
 
 function Homepage () {
@@ -14,7 +15,7 @@ function Homepage () {
     return(
         <div className='homePage'>
             <div className='loginCard'>
-                <h1>Star Wars</h1>
+                <h1>Star Wars Directory</h1>
                 {/* <h3>Search For a Character</h3> */}
 
                 {/* <form className='loginForm'> */}
@@ -24,6 +25,8 @@ function Homepage () {
                     <button onClick={() => navigate('/SingleCharacter', {character})}> Search for character </button> */}
 
                     <AllCharactersTrigger/>
+
+                    <AllMoviesTrigger/>
                 {/* </form> */}
             </div>
         </div>

@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './Components/HomePage';
 import AllCharactersDisplay from './Components/AllCharactersDisplay';
 import SingleCharacter from './Components/SingleCharacter';
+import AllMoviesDisplay from './Components/AllMoviesDisplay';
+import SingleMovie from './Components/SingleMovie';
 
 function App() {
 
@@ -25,6 +27,14 @@ function App() {
           <Route 
             path='/SingleCharacter'
             element={<SingleCharacter/>}
+          />
+          <Route 
+            path='/AllMovies'
+            element={<AllMoviesDisplay/>}
+          />
+          <Route 
+            path='/SingleMovie'
+            element={<SingleMovie/>}
           />
         </Routes>
       </Router>

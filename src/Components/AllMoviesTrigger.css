@@ -1,0 +1,21 @@
+.allMovies > button {
+
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #216ce7;
+    color: #fff;
+    padding: 16px 30px;
+    min-width: 200px;
+
+
+}
+
+.allMovies > button:hover {
+    transform: scale(1.10);
+    opacity: 1;
+    transition: all .2s;
+    background: #10449A;
+
+}

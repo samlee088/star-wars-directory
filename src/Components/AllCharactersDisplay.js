@@ -24,7 +24,7 @@ function AllCharactersDisplay() {
 
             setCharacters(request.data.results);
             setRequestData(request.data);
-            console.log(request.data);
+            // console.log(request.data);
             return request;
         }
 
