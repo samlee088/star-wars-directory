@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../axios';
 import {useNavigate} from 'react-router-dom';
-
+import './AllMoviesDisplay.css';
 
 function AllMoviesDisplay() {
 
@@ -37,10 +37,12 @@ function AllMoviesDisplay() {
             <div className='allMoviesCard'>
 
                 <h1>Star Wars Movies</h1>
-        
-                {movies.map((movie) => (
-                    <button key={movie.title} onClick = {() => singeMovieRoute(movie.url)} >{movie.title}</button>
-                ))}
+                <div className='allMoviesList'>  
+                    {movies.map((movie) => (
+                        <button key={movie.title} onClick = {() => singeMovieRoute(movie.url)} >{movie.title}</button>
+                    ))}
+                </div>
+              
             </div>
 
 

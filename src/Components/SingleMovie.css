@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.singleMovie {
+    background: black;
+    place-items: center;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+.singleMovieCard {
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 10px 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background: #fff;
+    place-items: center;
+    text-align: center;
+
+}
+
+.movieOpeningCrawl {
+    display: flex;
+    justify-content: center;
+    perspective: 400px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    text-align: justify;
+    height: 600px;
+}
+
+.crawl {
+    position: relative;
+    top: -100px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+}
+
+
+@keyframes crawl {
+    0% {
+      top: 0;
+      transform: rotateX(20deg) translateZ(0);
+    }
+    100% { 
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+
+@media (width >= 500px) {
+    body{
+        padding: 0;
+    }
+    .singleMovieCard{
+        margin: 0;
+        width: 600px;
+    }
+}
