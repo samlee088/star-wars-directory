@@ -2,6 +2,7 @@ import React, { useEffect, useState }from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from '../axios';
 import './SingleMovie.css';
+import HomeButton from './HomeButton';
 
 function SingleMovie() {
 
@@ -21,7 +22,6 @@ function SingleMovie() {
 
     },[])
 
-
     return(
 
         <div className='singleMovie'>
@@ -30,6 +30,7 @@ function SingleMovie() {
                 <h1>Star Wars Movie</h1>
                 <h2>Title: {movie.title}</h2>
                 <h2>Episode: {movie.episode_id}</h2>
+                <HomeButton/>
             </div>
             <div className='movieOpeningCrawl'>
                 <div className='crawl'>

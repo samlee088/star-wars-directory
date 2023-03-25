@@ -2,7 +2,6 @@ import React from 'react';
 import './AllMoviesTrigger.css';
 import {useNavigate} from 'react-router-dom';
 
-
 function AllMoviesTrigger() {
 
     const navigate = useNavigate();

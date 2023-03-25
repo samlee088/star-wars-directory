@@ -24,7 +24,6 @@ function AllCharactersDisplay() {
 
             setCharacters(request.data.results);
             setRequestData(request.data);
-            // console.log(request.data);
             return request;
         }
 
@@ -59,7 +58,6 @@ function AllCharactersDisplay() {
             </div>
         </div>
     )
-
 }
 
 export default AllCharactersDisplay;

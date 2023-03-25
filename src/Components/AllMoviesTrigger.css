@@ -1,5 +1,5 @@
 .allMovies > button {
-
+    font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
     border-radius: 10px;
@@ -8,8 +8,6 @@
     color: #fff;
     padding: 16px 30px;
     min-width: 200px;
-
-
 }
 
 .allMovies > button:hover {

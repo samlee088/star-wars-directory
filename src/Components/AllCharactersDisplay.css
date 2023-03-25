@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 .allCharacters {
     display: grid;
     place-items: center;
@@ -16,8 +15,6 @@
     background-size: cover;
     width: 100%;
     height: 100%;
-
-    
 }
 
 .allCharactersList > button {
@@ -29,7 +26,6 @@
     margin-top: 40px;
     border: none;
     cursor: pointer;
-
 }
 
 .allCharactersList > button:hover {
@@ -67,7 +63,6 @@
 .allCharactersList-form> button {
     width: 100%;
 }
-
 
 @keyframes rotate{
     100%{

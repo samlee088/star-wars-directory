@@ -15,15 +15,11 @@ function AllMoviesDisplay() {
             
             let request = await axios.get('films');
             setMovies(request.data.results);
-            console.log(request.data);
 
             return request
-
         }
        
         queryMovies()
-
-
 
     },[])
 
@@ -33,7 +29,7 @@ function AllMoviesDisplay() {
     
     return(
 
-        <div className='allMovies'>
+        <div className='allMoviesDisplay'>
             <div className='allMoviesCard'>
 
                 <h1>Star Wars Movies</h1>

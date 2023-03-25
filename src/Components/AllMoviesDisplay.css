@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 
-
-.allMovies {
+.allMoviesDisplay {
     background-image: url('https://www.denofgeek.com/wp-content/uploads/2020/05/Star-Destroyer.jpg?fit=1920%2C1080');
     height: 100vh;
     animation: rotate 6s infinite alternate linear;
@@ -17,7 +16,6 @@
 }
 
 .allMoviesCard {
-
     position: relative;
     z-index: 3;
     width: 100%;
