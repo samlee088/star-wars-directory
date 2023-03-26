@@ -10,18 +10,27 @@ function AllMoviesDisplay() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() =>  {
-
         async function queryMovies() {
-            
             let request = await axios.get('films');
-            setMovies(request.data.results);
-
+            let sortedMovies = sortMovies(request.data.results)
+            setMovies(sortedMovies);
+            console.log(request.data.results);
+            console.log(movies)
             return request
         }
        
         queryMovies()
+        sortMovies(movies)
 
     },[])
+
+    function sortMovies(movies) {
+
+       const sortedMovies = [...movies]
+       sortedMovies.sort((a,b) => a.episode_id - b.episode_id);
+       return sortedMovies
+    }
+
 
     async function singeMovieRoute(movieUrl) {
         navigate('/SingleMovie', {state: {movieUrl: movieUrl}})
